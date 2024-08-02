@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9ce1dc43d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" class="logo">
+                <ul id="sidemenu">
+                    
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>  
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> 
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hey There I'm  <span>Hari..</span> <br>Welcome to my portfolio..</h1>
+            </div>
+
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                  <img src="images/user.png">
+                </div>
+                <div class="col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Bonjour, I'm Hari Krishna, a dedicated coding enthusiast with a passion for building innovative and efficient solutions.I thrive on turning complex problems into seamless, user-friendly experiences.Skilled at working independently and collaboratively in a team environment.
+                         Proven ability to learn quickly and adapt to new situations.
+                         </p>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                        <div class="tab-links" onclick="opentab('hobbies')">Hobbies</div>
+                    </div> 
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web development</span><br> Front-End web applications development</li>
+                            <li><span>DSA</span><br> Knowledge on data structures and algorithms</li>
+                            <li><span>Machine Learning</span><br> Worked on Machine Learning Algorithms</li>
+
+                        </ul>
+                    </div> 
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>Completed 10th class at Narayana School</li>
+                            <li><span>2022</span><br> Completed 12th class at RGUKT Srikakulam</li>
+                            <li><span>2026</span><br> Graduating B-Tech in Cse at RGUKT Srikakulam</li>
+
+                        </ul>
+                    </div> 
+                    <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>Reading Books</span></li>
+                            <li><span>Listening Music</span></li>
+                            <li><span>Playing Cricket,Badminton</span></li>
+                            <li><span>Solving DSA Problems</span></li>
+
+                        </ul>
+                    </div> 
+                      
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">projects</h1>
+            <div class="project-list">
+                 <div>
+                    <i class="fa-brands fa-phoenix-framework"></i>
+                    <h2>RPG GAME</h2>
+                    <p>Created a simple RPG Game using HTML,CSS and JAVASCRIPT</p>
+                    <a href="https://harisolla.github.io/rpggame/">Learn more <i class="fa-solid fa-link"></i></a>
+                 </div>
+                 <div>
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <h2>Exquisite Stopwatch</h2>
+                    <p>Created an Exquisite Stopwatch using HTML,CSS and JAVASCRIPT</p>
+                    <a href=" https://harisolla.github.io/Stopwatch/">Learn more <i class="fa-solid fa-link"></i></a>
+                 </div>
+                 <div>
+                    <i class="fa-solid fa-clapperboard"></i>
+                    <h2>Netflix clone</h2>
+                    <p>Created a simple Netflix Home Page Clone using HTML,CSS and JAVASCRIPT</p>
+                    <a href="https://harisolla.github.io/Netflix-clone/">Learn more <i class="fa-solid fa-link"></i></a>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio -->
+     <!-- contact -->
+      <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>sollahari315@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+91 8179341934</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/hari-krishna-solla-848bb527b/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/Harisolla21"><i class="fa-brands fa-x-twitter"></i></a>
+                        
+                    </div>
+                    <a href="" class="btn">Download Resume</a>
+                </div>
+
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="your email" required>
+                        <textarea name="Message" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> [2024][Hari]. All rights reserved</p>
+        </div>
+      </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px"; 
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby2c6Ul7w4MXRM9_MRu9ZrmhATnaoG4oJHP6sPD0uogDXgZPdn9r0nU-xbRVi-0K_pDAw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg= document.getElementById('msg')
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML ="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },2000)
+            form.reset()
+
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
